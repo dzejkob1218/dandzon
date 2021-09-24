@@ -4,7 +4,7 @@ int main()
 { 
 
     
-    int proby;                                                                 //licznik zgonów
+    int proby;                                                                 //licznik zgonÃ³w
     proby=0;
 spawn:
 //Rozmaite kontrolki
@@ -59,7 +59,7 @@ switch(wybor1)
 
 
 
-gameover:                                                                      //Pora¿ka
+gameover:                                                                      //PoraÂ¿ka
          
          std::cout<<"\nPrzegrales! Czy chcesz zaczac od nowa?\n\n1-Tak\n2-Nie\n\n";
          int respawn;
@@ -70,7 +70,7 @@ gameover:                                                                      /
         
         
         
-wyburklasy:                                                                    //Wybór klasy
+wyburklasy:                                                                    //WybÃ³r klasy
            int hp=100;
            int mp=100;
            int sp=100;
@@ -88,7 +88,7 @@ switch(klasa)
              case 4: hp=hp-50; mp=mp+100; sp=sp; std::cout<<"\nJestes Czarodziejem,twoje aktualne statystyki: \nPunkty zycia(hp)     -" <<hp<<"\nPunkty magii(mp)     -"<<mp<< "\nPunkty skupienia(sp) -"<<sp;goto wyzwanie1;
 }               
 wyzwanie1:                                                                     //Etap 1 a
-         std::cout<<"\n\n\nWyszedles z pomieszczenia na szeroki, oswietlony wieloma pochodniami korytarz, \npod³oga jest przykryta czerwonym zdobionym w zlote nici dywanem,\na pod scianami stoja liczne puste zbroje. Co robisz?\n\n1-Wez pochodnie\n2-Zakuj sie w zbroje\n3-Owin sie w dywan i turlaj\n4-Po prostu idz dalej\n5-O! Czy to nie jest czasem magiczny grzyb zamiany w kota?\n\n";
+         std::cout<<"\n\n\nWyszedles z pomieszczenia na szeroki, oswietlony wieloma pochodniami korytarz, \npodÂ³oga jest przykryta czerwonym zdobionym w zlote nici dywanem,\na pod scianami stoja liczne puste zbroje. Co robisz?\n\n1-Wez pochodnie\n2-Zakuj sie w zbroje\n3-Owin sie w dywan i turlaj\n4-Po prostu idz dalej\n5-O! Czy to nie jest czasem magiczny grzyb zamiany w kota?\n\n";
           int wyborkorytarz;
           std::cin>>wyborkorytarz;
           switch (wyborkorytarz)
@@ -447,44 +447,7 @@ goto smokpokonany;
 } 
 
 wieza:
-std::cout<<"\n\nTymczasowo jestes bezpieczny i mozesz pozwiedzac wieze czarodzieja."; goto wpietro0;
-{
-//
-wpietro0:std::cout<<"\n\nStoisz w niewielkim pomieszczeniu ze schodami w gore i w dol, oraz z drzwiami z przodu\n\n1-Schodami w gore\n2-Schodami w dol\n3-Drzwi z przodu\n";int kotlet0;std::cin>>kotlet0;switch(kotlet0){case 1:goto wpietro_1; case 2:goto wpietro1; case 3:goto wp0drzwi; }
-{wp0drzwi:std::cout<<"\nZa drzwiami znajduje sie niewielki magazyn wypelniony skrzyniami\nW kacie stoi tez automat z bronia.\n";switch(kasa){case 0:std::cout<<"Niestety, nie masz przy sobie pieniedzy.\nNie zrobisz tu nic, wiec wychodzisz\n";goto wpietro0; case 1:{1moneta: std::cout<<"\nMasz jedna monete, mozesz za nia kupic:\n1-Naostrzony kijek\n2-Proce\n3-Drewniana rozdzke\n4-Nie kupuj nic!\n";int aut1;std::cin>>aut1;switch(aut1){ case 1:std::cout<<"\nKupujesz Naostrzony kijek-to potezna bron, uzywaj jej madrze!\nTwoja nowa klasa broni to 15.\n";kb=15;std::cout<<"Wychodzisz z pomieszczenia\n";kasa--;goto wpoziom0; case 2:std::cout<<"\nKupujesz Proce-na koty powinna wystarczyc, ale ze smokami, coz...\nTwoja nowa klasa broni dystansowej to 10\n";kd=10;std::cout<<"Wychodzisz z pomieszczenia\n";kasa--;goto wpoziom0; case 3:std::cout<<"\nKupujesz Drewniana Rozdzke-jeszcze troche i bedziesz poteznym magiem!\nTwoja nowa klasa magii to 1.5\n";km=1.5;std::cout<<"Wychodzisz z pomieszczenia\n";kasa--;goto wpoziom0;case 4:std::cout<<"\nSknera...\n"; goto wpoziom0}case 2: {std::cout<<"\nMasz dwie monety, mozesz za nie kupic:\n1-Naostrzony kijek\n2-Proce\n3-Drewniana rozdzke\n4-Brazowy miecz\n5-Atlat\n6-Kamienna rozdzke\n7-Nie kupuj nic!\n";int aut2;std::cin>>aut2;switch(aut2){ case 1:std::cout<<"\nKupujesz Naostrzony kijek-to potezna bron, uzywaj jej madrze!\nTwoja nowa klasa broni to 15.\n";kasa--;kb=15;std::cout<<"Wciaz masz jedna monete!\n";goto 1moneta; case 2:std::cout<<"\nKupujesz Proce-na koty powinna wystarczyc, ale ze smokami, coz...\nTwoja nowa klasa broni dystansowej to 10\n";kasa--;kd=10;std::cout<<"Wciaz masz jedna monete!\n";goto 1moneta; case 3:std::cout<<"\nKupujesz Drewniana Rozdzke-jeszcze troche i bedziesz poteznym magiem!\nTwoja nowa klasa magii to 1.5\n";kasa--;km=1.5;std::cout<<"Wciaz masz jedna monete!\n";goto 1moneta;case 4:std::cout<<"\nKupujesz Brazowy Miecz-to bron ze slabego materialu, ale w dobrych rekach wiele zdziala!\nTwoja nowa klasa broni to 30.\n";kb=30;std::cout<<"Wychodzisz z pomieszczenia\n";kasa--;kasa--;goto wpietro0; case 2:std::cout<<"\nKupujesz Atlat-jesli nie wiesz: to taki kijek, ktory pomaga w rzucaniu osczepami\nTwoja nowa klasa broni dystansowej to 20\n";kd=20;std::cout<<"Wychodzisz z pomieszczenia\n";kasa--;kasa--;goto wpietro0; case 3:std::cout<<"\nKupujesz Kamienna Rozdzke-UWAGA! Moze wystapic rzucenie czaru w strone uzytkownika!\nTwoja nowa klasa magii to 2\n";kasa--;kasa--;km=2;std::cout<<"Wychodzisz z pomieszczenia\n";goto wpoziom0;case 7:std::cout<<"\nSknera...\n"; goto wpoziom0}
-//
-wpietro1:std::cout<<"\n\nWchodzisz na poziom wyzej.\nMozna sie stad dostac jeszcze wyzej oraz wejsc przez drzwi z lewej lub prawej.\n\n1-Schodami w dol\n2-Schodami w gore\n3-Drzwi z lewej\n4-Drzwi z prawej\n";int kotlet1;std::cin>>kotlet1;switch(kotlet1){case 1:goto wpietro0; case 2:goto wpietro2; case 3:goto wp1drzwi2; case 4:goto wp1drzwi2;}
-{wp1drzwi1:std::cout<<"\n
- wp1drzwi2:std::cout<<"\n
- }
-//
-wpietro2:std::cout<<"\n\nWchodzisz na poziom wyzej.\nMozna sie stad dostac jeszcze wyzej lub wejsc przez drzwi z lewej.\nPo prawej stronie jest zamknieta cela w ktorej wisi przykuty do sciany szkielet\n\n1-Schodami w dol\n2-Schodami w gore\n3-Drzwi z lewej\n4-Sproboj otworzyc cele\n";int kotlet2;std::cin>>kotlet2;switch(kotlet2){case 1:goto wpietro1; case 2:goto wpietro3; case 3:goto wp2drzwi1; case 4:goto wp2drzwi2;}
-{wp2drzwi1:std::cout<<"\n
- wp2drzwi2:std::cout<<"\n
- }
-//
-wpietro3:std::cout<<"\n\nWchodzisz na ostatnie pietro.\nMozna wejsc przez drzwi z prawej. Po lewej stronie jest okno.\n\n1-Schodami w dol\n2-Drzwi z prawej\n3-Wyjdz przez okno\n";int kotlet3;std::cin>>kotlet3;switch(kotlet3){case 1:goto wpietro2; case 2:goto wp3drzwi1; case 3:goto wp3drzwi2;}
-{wp3drzwi1:std::cout<<"\n
- wp3drzwi2:std::cout<<"\n
- }
-//
-wpietro_1:std::cout<<"\n\n
-{
-                         
-}
-//
-wpietro_2:std::cout<<"\n\n
-{
-                         
-}
-//
-pietro_3:std::cout<<"\n\n
-{ 
-                                
-}        
-
-}
-
+system("pause");
 
 
 smokpokonany:
@@ -494,11 +457,10 @@ system("pause");
 // std::cout<<"\nTwoje aktualne statystyki:  \nKlasa broni (kb)     -" <<kb<<"\nKlasa broni dyst.(kd)-" <<kd<<"\nKlasa magii (km)     -" <<km<<"\nPunkty zycia(hp)     -" <<hp<<"\nPunkty magii(mp)     -"<<mp<< "\nPunkty skupienia(sp) -"<<sp;    
 // \nTwoje aktualne statystyki: hp-"<<xhp<<" mp-"<<xmp<<" sp-"<<xsp                      
  
-// Ksiêga magii: 1-P³omienie 2-Lód 3-Pioruny
-// Bronie: 1-Piesci- 5dmg  2-Nó¿ - 10dmg 3-Miecz - 30dmg 4-Topór - 50dmg 5-Wielki m³ot - 100dmg
-// Broñ dystansowa: 1-Rzucanie kamieniami - 3dmg 2-Proca - 7dmg 3-£uk - 15dmg 4-Kusza - 30 dmg 5-Podrêczna balista - 50dmg
+// KsiÃªga magii: 1-PÂ³omienie 2-LÃ³d 3-Pioruny
+// Bronie: 1-Piesci- 5dmg  2-NÃ³Â¿ - 10dmg 3-Miecz - 30dmg 4-TopÃ³r - 50dmg 5-Wielki mÂ³ot - 100dmg
+// BroÃ± dystansowa: 1-Rzucanie kamieniami - 3dmg 2-Proca - 7dmg 3-Â£uk - 15dmg 4-Kusza - 30 dmg 5-PodrÃªczna balista - 50dmg
 
 
 //Skrypt Bitwy:
          
-
